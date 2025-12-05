@@ -57,7 +57,7 @@ function MovieModal({ movie, onClose }: MovieModalProps) {
           src={
             movie.backdrop_path
               ? `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`
-              : "https://via.placeholder.com/500x750?text=No+Backdrop"
+              : "https://via.placeholder.com/500x750?text=No+Image"
           }
           alt={movie.title}
           className={css.image}

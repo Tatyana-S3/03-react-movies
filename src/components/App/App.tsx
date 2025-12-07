@@ -21,7 +21,6 @@ function App() {
     setLoading(true);
 
     try {
-      setLoading(true);
       const data = await fetchMovies(query);
       setMovies(data || []);
 
@@ -30,6 +29,7 @@ function App() {
         return;
       }
     } catch {
+      setIsError(true);
       toast.error("Failed to fetch movies. Please try again later.");
     } finally {
       setLoading(false);
